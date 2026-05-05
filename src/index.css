@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-black: #0E1111;
+  --color-brand-white: #FFFFFF;
+  --color-brand-grey: #F8F9FA;
+  --color-brand-accent: #25A9C0;
+  --color-brand-bg: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brand-bg text-brand-black antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-black/5;
+}
+
+.btn-primary {
+  @apply bg-brand-accent text-white px-8 py-4 rounded-none font-bold uppercase tracking-wider hover:bg-brand-accent/90 transition-all active:scale-95 text-center inline-block;
+}
+
+.btn-secondary {
+  @apply bg-transparent text-brand-accent border-2 border-brand-accent px-8 py-4 rounded-none font-bold uppercase tracking-wider hover:bg-brand-accent/5 transition-all active:scale-95 text-center inline-block;
+}
